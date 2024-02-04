@@ -49,9 +49,13 @@ img{
         grid-template-columns: auto auto;
         gap: 10px;
     }
-    .grid figure:nth-last-child(-n +2){
-        grid-column: 1;
-        width: 100%;
+
+    .grid figure:nth-last-child(-n +1){
+        
+        grid-template-columns: auto;
+        width: 50%;
+        justify-self: center;
+        grid-column: 1 / -1;
     }
 
     img{
@@ -70,7 +74,9 @@ img{
         gap: 10px;
     }
     .grid figure:nth-child(3n -2){
-        grid-column: 1;
+        grid-column: 1 / -1;
+        width: 50%;
+        justify-self: center;
     }
 
 
@@ -81,7 +87,7 @@ img{
 
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion) {
   html{
     scroll-behavior: none;
     }
